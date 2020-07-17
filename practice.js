@@ -79,9 +79,23 @@ function HelloWorld() {
     )
 }
 
+//JSX code, a component function must return single element, an array could also be returned
+function HelloWorld() {
+    return [<Hello />, <World />];
+}
+
+//JS code, a component function must return single element, an array could also be returned
+function HelloWorld() {
+    return [
+        React.createElement(Hello, null),
+        React.createElement(Hello, null)
+    ];
+}
+
 //renders like this, ReactDOM.render([React Element], [DOM element]);
 ReactDOM.render(
     <HelloWorld />,
     document.querySelector('#root')
 );
 
+Continue from 'Wrap With a Tag'
