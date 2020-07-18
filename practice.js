@@ -137,4 +137,4 @@ ReactDOM.render(
     document.querySelector('#root')
 );
 
-Continue from 'Wrap With a Tag'
+Continue from ''
