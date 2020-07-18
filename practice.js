@@ -92,6 +92,45 @@ function HelloWorld() {
     ];
 }
 
+//to return tables in react by retaining their structure, fragments help to produce valid HTML
+function NameCells() {
+    return (
+        <React.Fragment>
+            <td>First Name</td>
+            <td>Last Name</td>
+        </React.Fragment>
+    )
+}
+
+//empty tag which represent fragments
+function NameCells() {
+    return (
+        <>
+            <td>First Name</td>
+            <td>Last Name</td>
+        </>
+    )
+}
+
+//conditional statement-1 in JSX
+function ValidIndicator() {
+    const isValid = true;
+    return (
+        <span>{isValid ? 'valid' : 'not valid'}</span>
+    );
+}
+
+//conditional statement-2 in JSX
+function ValidIndicator() {
+    const isValid = true;
+    return (
+        <span>
+            {isValid && 'valid'}
+            {!isValid && 'not valid'}
+        </span>
+    );
+}
+
 //renders like this, ReactDOM.render([React Element], [DOM element]);
 ReactDOM.render(
     <HelloWorld />,
